@@ -72,3 +72,10 @@ function showWinner(message) {
     winnerElement.remove();
   }, 3000);
 }
+
+// Add event listeners to each cell to make moves
+document.querySelectorAll('.cell').forEach((cell, index) => {
+  cell.addEventListener('click', () => {
+    makeMove(index);
+  });
+});
