@@ -1,0 +1,19 @@
+body {
+  background-color: #4B4B4B;
+}
+
+.home-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #FF0000;
+  border: 1px solid black;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 0 0 80%;
+  text-align: center;
+  line-height: 45px;
+  font-size: 28px;
+  text-decoration: none;
+}

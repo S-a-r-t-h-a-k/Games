@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+  position: relative;
+  top: 300px;
+}
+a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 5px;
+  color: #00ECFF;
+  background-color: black;
+}
