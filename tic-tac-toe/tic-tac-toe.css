@@ -1,0 +1,157 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('tic-tac-toe.jpg'); /* Add the background image URL */
+  background-size: cover; /* Cover the entire viewport */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+.home-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #FF0000;
+  border: 1px solid black;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 0 0 80%;
+  text-align: center;
+  line-height: 45px;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 20px;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  margin-top: 0; /* Remove top margin */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin-top: 20px;
+  position: relative; /* Add position relative */
+  z-index: 2; /* Ensure the board is above the background */
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid rgb(187, 187, 187);
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative; /* Add position relative */
+}
+
+.cell:hover {
+  background-color: #ffffff;
+}
+
+.cell:active {
+  transform: scale(0.95);
+}
+
+.cell.X {
+  color: #1abc9c;
+}
+
+.cell.O {
+  color: #3498db;
+}
+
+#result {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  color: #555;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: relative; /* Add position relative */
+  z-index: 2; /* Ensure the result message is above the background */
+}
+
+#result.show {
+  opacity: 1;
+}
+
+#winner {
+  font-size: 36px;
+  font-weight: bold;
+  color: #27ae60;
+  animation: bounce 0.5s ease;
+  position: absolute; /* Change position to absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  z-index: 3; /* Ensure the winner message is above the background */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.restart-button {
+  background-color: #3ab0ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 80px; /* Increase margin-top to create space for the popup */
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  position: relative; /* Change position to relative */
+  z-index: 2; /* Ensure the button is above the background */
+}
+
+.restart-button:hover {
+  background-color: #000000;
+}
+
+footer {
+  position: fixed; /* Set position to fixed */
+  bottom: 0; /* Anchor to the bottom of the viewport */
+  width: 100%; /* Set width to 100% */
+  padding: 20px;
+  background-color: #1f1f1f;
+  text-align: center;
+  z-index: 2; /* Ensure the footer is above the background */
+}
+
+footer p {
+  color: #ffffff; /* Adjusted text color */
+  font-size: 16px; /* Adjusted font size */
+}
+
+footer a {
+  text-decoration: none;
+  color: #36a9f7;
+}
