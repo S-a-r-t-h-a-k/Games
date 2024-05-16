@@ -1,5 +1,6 @@
 body {
-  background-color: #4B4B4B;
+  background-color: #323232;
+  margin: 0;
 }
 
 .home-button {
@@ -16,4 +17,112 @@ body {
   line-height: 45px;
   font-size: 28px;
   text-decoration: none;
+}
+
+.game-canvas {
+  width: 100%;
+  height: 100vw;
+  max-width: 500px;
+  max-height:500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.keys {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  top: 50px;
+}
+
+.up {
+  position: relative;
+  top: -4px;
+}
+
+.chevron::before {
+  border-style: solid;
+  border-width: 8px 8px 0 0;
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  top: -10px;
+  position: relative;
+  transform: rotate(-45deg);
+}
+
+.chevron.down::before {
+  transform: rotate(135deg);
+  top: -22px;
+}
+
+.chevron.right::before {
+  transform: rotate(45deg);
+  top: -18px;
+  left: -5px;
+}
+
+.chevron.left::before {
+  transform: rotate(225deg);
+  top: -18px;
+  left: 5px;
+}
+
+.arr {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 100px;
+  background: gray;
+  color: white;
+  font-size: 50px;
+  border-right: 10px solid #ccc;
+  border-bottom: 10px solid #ccc;
+  border-left: 10px solid #ddd;
+  border-top: 10px solid #eee;
+  display: inline-block;
+  margin: 5px;
+  transition: all .05s linear;
+  user-select: none;
+}
+
+.arr:active {
+  background: #555;
+}
+
+#game-container {
+  display: flex;
+  border: 4px solid black;
+  flex-direction: column;
+  background-color: #585858;
+  margin: 10px;
+  position: relative;
+  top: 50px;
+}
+
+footer {
+  margin: 0;
+  position: fixed; /* Set position to fixed */
+  bottom: 0; /* Anchor to the bottom of the viewport */
+  width: 100%; /* Set width to 100% */
+  background-color: #1f1f1f;
+  text-align: center;
+  z-index: 2; /* Ensure the footer is above the background */
+}
+
+footer p {
+  color: #ffffff; /* Adjusted text color */
+  font-size: 16px; /* Adjusted font size */
+}
+
+footer a {
+  text-decoration: none;
+  color: #36a9f7;
 }
