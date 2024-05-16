@@ -44,6 +44,7 @@ h3 {
     height: auto;
     border: 4px solid black;
     border-radius: 50px;
+    touch-action: none;
 }
 
 nav {
