@@ -94,7 +94,7 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #1f1f1f;
+  background-color: #000000;
   text-align: center;
   z-index: 2;
 }
@@ -107,15 +107,4 @@ footer p {
 footer a {
   text-decoration: none;
   color: #36a9f7;
-}
-
-.watermark {
-  text-align: center;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 24px;
-  color: #686868;
-  pointer-events: none;
 }
