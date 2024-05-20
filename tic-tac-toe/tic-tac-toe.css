@@ -137,17 +137,17 @@ h1 {
 }
 
 footer {
-  position: fixed; /* Set position to fixed */
-  bottom: 0; /* Anchor to the bottom of the viewport */
-  width: 100%; /* Set width to 100% */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: #1f1f1f;
   text-align: center;
-  z-index: 2; /* Ensure the footer is above the background */
+  z-index: 2;
 }
 
 footer p {
-  color: #ffffff; /* Adjusted text color */
-  font-size: 16px; /* Adjusted font size */
+  color: #ffffff;
+  font-size: 16px;
 }
 
 footer a {

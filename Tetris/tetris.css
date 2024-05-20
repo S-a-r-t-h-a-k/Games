@@ -1,0 +1,90 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #313131;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  min-height: 100vh;
+  text-align: center;
+}
+
+.home-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #FF0000;
+  border: 1px solid black;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 0 0 0 80%;
+  text-align: center;
+  line-height: 45px;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+h1 {
+  position: fixed;
+  top: -30px;
+  left: 150px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+canvas {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  border: 2px solid #000;
+  width: 320px;
+  height: 640px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.rotate {
+  border: 2px solid white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 30px;
+  opacity: 0.4;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 70px;
+  left: 180px;
+}
+
+.rotate:hover {
+  opacity: 1;
+  background-color: #222222;
+}
+  
+footer {
+  width: 100%;
+  background-color: #1f1f1f;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #36a9f7;
+}
