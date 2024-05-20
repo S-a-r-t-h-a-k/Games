@@ -66,6 +66,17 @@ let touchendX = 0;
 let touchstartY = 0;
 let touchendY = 0;
 
+// Adding event listener for the down button
+const downBtn = document.querySelector(".down");
+downBtn.addEventListener("click", () => {
+    let newRow = tetromino.row;
+    while (isValidMove(tetromino.matrix, newRow + 1, tetromino.col)) {
+        newRow++;
+    }
+    tetromino.row = newRow;
+    placeTetromino();
+});
+
 document.addEventListener('touchstart', function(event) {
     touchstartX = event.changedTouches[0].screenX;
     touchstartY = event.changedTouches[0].screenY;
@@ -87,6 +98,29 @@ function getSwipeDirection() {
         return deltaX > 0 ? 'right' : 'left';
     } else {
         return deltaY > 0 ? 'down' : 'up';
+    }
+}
+
+// Function to handle swipe gestures
+function handleSwipe(direction) {
+    if (gameOver) return;
+    if (direction === "left") {
+        const col = tetromino.col - 1;
+        if (isValidMove(tetromino.matrix, tetromino.row, col)) {
+            tetromino.col = col;
+        }
+    } else if (direction === "right") {
+        const col = tetromino.col + 1;
+        if (isValidMove(tetromino.matrix, tetromino.row, col)) {
+            tetromino.col = col;
+        }
+    } else if (direction === "down") {
+        let newRow = tetromino.row;
+        while (isValidMove(tetromino.matrix, newRow + 1, tetromino.col)) {
+            newRow++;
+        }
+        tetromino.row = newRow;
+        placeTetromino();
     }
 }
 
@@ -290,5 +324,26 @@ function loop() {
       }
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var startX;
+    var startY;
+    
+    document.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+    });
+
+    document.addEventListener('touchmove', function(e) {
+        var deltaX = e.touches[0].clientX - startX;
+        var deltaY = e.touches[0].clientY - startY;
+        
+        // Check if the swipe is mostly vertical
+        if (Math.abs(deltaY) > Math.abs(deltaX)) {
+            // Prevent the default behavior of the swipe
+            e.preventDefault();
+        }
+    });
+});
 
 rAF = requestAnimationFrame(loop);
